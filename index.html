@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cookie Clicker</title>
+</head>
+<body>
+    <div class="header">
+        <div class="headerTitle">
+            <h1 id="gameTitle">Bakery</h1>
+        </div>
+        <div class="openBtn">
+            <button class="openButton" onclick="openPopup()">Change Name</button>
+        </div>
+        <div class="namePopup">
+            <div class="formPopup" id="popupForm">
+              <form class="formContainer">
+                <h2>Name your Bakery!</h2>
+                <input type="text" id="nameInput">
+                <button type="submit" class="btn" onclick="changeTitle()">Save</button>
+                <button type="button" class="btn" onclick="closePopup()">Cancel</button>
+              </form>
+            </div>
+          </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
