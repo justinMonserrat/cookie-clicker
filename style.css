@@ -1,89 +1,180 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #154c79;
+  background-image: url("assets/bgBlue.jpg");
+  max-width: 100%;
+  overflow-x: hidden;
+  
+}
+
+
+.cookieBoard {
+  width: 30%;
+  float: left;
+}
+
+.border {
+  margin-left: 100%;
+
+}
+
+.statsBar {
+  width: 50%;
+  float: left;
+}
+
+.storeBar {
+  width: 16%;
+  float: right;
+  margin: 0;
+  padding: 0;
 }
 
 #gameTitle {
-    font-size: 30px;
-    font-weight: lighter;
-    text-align: center;
-    background-color: #13568d;
-    margin: auto;
-    width: 50%;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 5px;
-}
+  font-size: 30px;
+  font-weight: lighter;
+  color: white;
+  text-align: center;
+  background: rgba(0 , 0, 0, .3);
+  border-radius: 25px;
 
-.openBtn {
-    display: flex;
-    justify-content: center;
-    margin: 1em;
-}
-
-.openButton {
-    font-weight: bolder;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: #13568d;
-    padding: 10px 15px;
-    cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 1em;
+  padding: 5px;
 }
 
 .namePopup {
-    position: relative;
-    text-align: center;
-    width: 100%;
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
 
 .formPopup {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 5%;
-    transform: translate(-50%, 50%);
-    background-color: #13568d;
-    border: 3px solid black;
-    border-radius: 10px;
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, 50%);
+  border-radius: 10px;
 }
 
 .formContainer {
-    max-width: 300px;
-    padding: 20px;
-    background-color: #fff;
-  }
+  color: #dcc080;
+  max-width: 400px;
+  padding: 20px;
+  background: radial-gradient(#1B1B1B, black);
+  border: 2.5px solid #dcc080;
+}
 
 .formContainer input[type=text] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 20px 0;
-    border: none;
-    background: #eee;
-  }
-
-.formContainer input[type=text]:focus {
-    background-color: lightgray;
-    outline: none;
-  }
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  border-radius: 10px;
+  background: #eee;
+}
 
 .formContainer .btn {
-    padding: 12px 20px;
-
-    background-color: #13568d;
-    font-weight: bolder;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 15px;
-    opacity: 0.8;
-  }
+  padding: 12px 20px;
+  color: white;
+  background-color: black;
+  border: 2px solid #dcc080;
+  font-weight: bolder;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
 
 .formContainer .cancel {
-    background-color: #13568d;
-  }
+  background-color: #13568d;
+}
 
-.btn:hover, .openButton:hover {
-    background-color: #154c79;
+h2, h3 {
+  display: inline;
+}
+
+.cookieInfo {
+  font-size: 18px;
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+  background: rgba(0 , 0, 0, .3);
+  margin: auto;
+  width: 100%;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+
+#cookie {
+  background: url("assets/cookie.jpg");
+  background-size: cover;
+  width: 256px;
+  height: 256px;
+  border: 0;
+  border-radius: 128px;
+  margin-top: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cookie:hover {
+  animation: cookieBounce .5s ease-in-out 2;
+  cursor: pointer;
+}
+
+.cookieBounceClick {
+  animation: cookieBounce .5s;
+}
+
+@keyframes cookieBounce {
+  0% {
+    transform: scale(1, 1);
   }
+  50% {
+    transform: scale(1.05, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+#grandma {
+  width: 100px;
+}
+
+.grandmasDisplay {
+  display: flex;
+}  
+
+.grandmaPic {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+
+}
+
+
+.separatorLeft, .separatorRight
+{
+  width:16px;
+  height:100%;
+  background:url("assets/panelVertical5e1f.png") ;
+  position:absolute;
+  top:0px;
+  bottom:0px;
+}
+.separatorLeft
+{
+  left:30%;
+}
+.separatorRight
+{
+  right:317px;
+}

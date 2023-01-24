@@ -8,24 +8,64 @@
     <title>Cookie Clicker</title>
 </head>
 <body>
+  <div class="cookieBoard">
     <div class="header">
-        <div class="headerTitle">
-            <h1 id="gameTitle">Bakery</h1>
+      <div class="headerTitle">
+        <button class="openButton" id="gameTitle" onclick="openPopup()">Bakery</button>
+      </div>
+      <div class="namePopup">
+        <div class="formPopup" id="popupForm">
+          <form class="formContainer">
+            <img src="assets/featherLeft.png">
+            <h2>Name your Bakery!</h2>
+            <img src="assets/featherRight.png">
+            <p>What should your bakery's name be?</p>
+            <input type="text" id="nameInput">
+            <button type="button" class="btn" onclick="changeTitle()">Confirm</button>
+            <button type="button" class="btn" onclick="closePopup()">Cancel</button>
+          </form>
         </div>
-        <div class="openBtn">
-            <button class="openButton" onclick="openPopup()">Change Name</button>
+      </div>
+      <div class="cookieInfo">
+        <div class="cookieTotal">
+          <h2 id="cookieCount">0</h2>
+          <h2 id="cookieLabel">cookies</h2>
         </div>
-        <div class="namePopup">
-            <div class="formPopup" id="popupForm">
-              <form class="formContainer">
-                <h2>Name your Bakery!</h2>
-                <input type="text" id="nameInput">
-                <button type="submit" class="btn" onclick="changeTitle()">Save</button>
-                <button type="button" class="btn" onclick="closePopup()">Cancel</button>
-              </form>
-            </div>
-          </div>
+        <div class="cps">
+          <h3 id="cpsLabel">per second: </h2>
+            <h3 id="cpsCount">0</h2>
+        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
+    <div class="cookieButton">
+      <button id="cookie" onclick="cookieClicked()"></button>
+    </div>
+    <div class="separatorLeft"></div>
+    <div class="separatorRight"></div>
+  </div>
+  <div class="statsBar">
+    <div class="grandmasDisplay">
+      <img class="grandmaPic" src="assets/grandmaBackground.png">
+      <img class="grandmaPic" src="assets/grandmaBackground.png">
+      <img class="grandmaPic" src="assets/grandmaBackground.png">
+      <img class="grandmaPic" src="assets/grandmaBackground.png">
+      <img class="grandmaPic" src="assets/grandmaBackground.png">
+      <img class="grandmaPic" src="assets/grandmaBackground.png">
+      <img class="grandmaPic" src="assets/grandmaBackground.png">
+      <img class="grandmaPic" src="assets/grandmaBackground.png">
+    </div>
+  </div>
+  <div class="storeBar">
+    <div class="upgradesBar">
+
+    </div>
+    <div class="buildingsBar">
+      <input type="image" src="assets/grandma.jpg" id="grandma" onclick="grandmaUpgrade()">
+      <h3 id="grandmaLabel">Grandma</h3>
+      <h3 id="grandmaCount">0</h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
